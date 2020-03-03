@@ -7,105 +7,83 @@ body{
   font-size: 20px;
   margin: 0;
   padding: 0;
+  font-family: 'Roboto';
+  font-weight: none;
 }
 
 p {
   font-size: 20px;
-  margin: 10px;
 }
 
-
-
-h1{
-  font-size: 50px;
-  line-height: 1;
-  padding: 50px 0;
-  text-align: center;
+h1 {
+  font-size: 40px;
+  padding: 20px;
+  /*border: 2px solid #97e314;*/
+  font-family: 'Oswald', 'Roboto';
 }
 
-.block{
-  padding: 10px;
-  text-align: center;
+h2 {
+  font-size: 30px;
 }
 
-h3{
+h3 {
   font-size: 20px;
 }
 
-h2{
-  font-size: 25px;
-  padding: 10px;
-  margin-bottom: 20px;
-  text-align: center;
+.container {
+  display: grid;
+  grid-template-columns: auto 200px auto;
+  grid-template-rows: 100px repeat(5, auto) 100px;
+  grid-row-gap: 15px;
 }
 
 nav{
-  background-color: #ddd;
-  text-align: right;
-  padding: 35px;
+  background-color: black;
+  padding: 30px; 
+  text-align: center;
+  color: white;
+  align-self: center;
+
+  grid-column: 1 / -1;
+  grid-row: 1 / span 1;
 }
 
 nav li{
   display: inline;
-  padding-right:20px;
+  margin-right: 10px;
 }
 
 nav a{
-  color: black;
-  font-weight: bold;
-  text-decoration: none; 
+  color: white;
+  text-decoration: none;   
+  padding: 5px 15px;
+  border: 2px solid #97e314;
 }
 
 nav a:hover{
-  text-decoration: underline;
+  background-color: #97e314;
+  padding: 5px 15px;
+  color: black;
 }
 
-
-
-
-
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-template-rows: repeat(4, auto), 100px;
-}
-
-#landing {
+header {
   grid-column: 1 / -1;
-  grid-row: 1 / 4;
+  grid-row: 2 / span 1;
 }
+
 
 
 footer{
-  grid-row: 4 / span 1;
-  grid-column: 1 / -1;
-  padding: 20px;
   background-color: black;
-  margin-top: 30px;
-  text-align: center;
-
-}
-
-footer p {
-  grid-column: 1 / span 1; 
   color: white;
+  grid-column: 1 / -1;  
+  grid-row: 7 / auto;     
+  padding-top: 30px;
 }
 
 footer a {
-  grid-column: 3 / span 1; 
-  text-align: center;
+  grid-column: 2 / 3;
   color: white;
-  font-size: 30px;
-  text-decoration: none;  
-  border: 2px solid white;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-footer a:hover {
-  background-color: white;
-  color:black;
 }
 
 
