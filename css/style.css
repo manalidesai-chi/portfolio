@@ -1,3 +1,4 @@
+
 html{
     scroll-behavior: smooth;
 }
@@ -11,6 +12,13 @@ body{
   font-weight: none;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px repeat(5, auto) 100px;
+  /*grid-row-gap: 10px;*/
+}
+
 p {
   font-size: 20px;
 }
@@ -18,28 +26,28 @@ p {
 h1 {
   font-size: 40px;
   padding: 20px;
-  /*border: 2px solid #97e314;*/
+  border: 2px solid #97e314;
   font-family: 'Oswald', 'Roboto';
+  background-color: #97e314;
+  position: absolute;
+  align-self: center;
 }
 
 h2 {
   font-size: 30px;
+  padding: 10px;
+  text-align: center;
 }
 
 h3 {
   font-size: 20px;
-}
+  padding-bottom: 10px;
 
-.container {
-  display: grid;
-  grid-template-columns: auto 200px auto;
-  grid-template-rows: 100px repeat(5, auto) 100px;
-  grid-row-gap: 15px;
 }
 
 nav{
   background-color: black;
-  padding: 30px; 
+  padding: 35px; 
   text-align: center;
   color: white;
   align-self: center;
@@ -66,25 +74,75 @@ nav a:hover{
   color: black;
 }
 
-header {
+/*header {
   grid-column: 1 / -1;
   grid-row: 2 / span 1;
+  position: absolute;
+
+}*/
+
+img {
+  display: block;
+  width: 100%;
 }
 
+/*#landing {
+  display: block;
+  width: 100%;
+}
+*/
 
+
+
+.landing h1{
+  /*position: absolute;*/
+  /*top: 0px;*/
+  left: 0px;
+  background-color: #97e314;
+  font-size: 7vw;
+  padding: 2vw 5vw;
+}
 
 footer{
   background-color: black;
-  color: white;
   grid-column: 1 / -1;  
-  grid-row: 7 / auto;     
-  padding-top: 30px;
+  grid-row: 7 / span 1;     
+  padding: 20px 0px;
+  text-align: center;
+  align-self: center;
+  /*border: 2px solid red;*/
+  color: white;
 }
 
 footer a {
-  grid-column: 2 / 3;
   color: white;
 }
+
+.about-block {
+  margin: 20px;
+}
+
+
+.block {
+  margin: 20px;
+}
+
+.about > p {
+  text-align: center;
+}
+
+
+@media all and (min-width: 800px){
+
+/*.landing h1{
+  position: absolute;
+  top: 25px;
+  left: 0px;
+  background-color: #97e314;
+  font-size: 60px;
+  padding: 10px 20px;
+}
+*/
 
 
 
