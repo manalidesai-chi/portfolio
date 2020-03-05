@@ -23,10 +23,32 @@ p {
   font-size: 20px;
 }
 
+a.skip{
+  background: black;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+a.skip:focus{
+  top:20px;
+  color: green;
+  text-decoration-style: solid;
+}
+
+*:focus{
+  border: 5px solid #97e314;
+}
+
+
 h1 {
 /*  font-size: 40px;
   padding: 20px;
-*/  font-size: 6vw;
+*/font-size: 6vw;
   padding: 2vw 5vw;
 
   border: 2px solid #97e314;
@@ -37,14 +59,17 @@ h1 {
 }
 
 h2 {
+  display: inline-block;
   font-size: 30px;
   padding: 10px;
-  text-align: center;
+  /*text-align: center;*/
+  background-color: #97e314;
+  align-items: center;
 }
 
 h3 {
   font-size: 20px;
-  padding-bottom: 10px;
+  padding: 10px 0px;
 
 }
 
@@ -113,7 +138,6 @@ footer{
   padding: 20px 0px;
   text-align: center;
   align-self: center;
-  /*border: 2px solid red;*/
   color: white;
 }
 
@@ -134,6 +158,33 @@ footer a {
   text-align: center;
 }
 
+.gallery {
+  /*min-height: 500px;*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  /*border: 2px solid red;*/
+}
+
+.card {
+  width: 300px;
+  height: 350px;
+  overflow: hidden;
+  border: 2px solid red;
+  margin: 10px;
+  border: 5px solid #97e314;
+}
+
+.card > img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  /*border: 2px solid red;*/
+}
+
+
 
 @media all and (min-width: 800px){
 
@@ -146,6 +197,11 @@ footer a {
   padding: 10px 20px;
 }
 */
+
+h1 {
+  font-size: 4vw;
+  padding: 1.5vw 5vw;
+}
 
 
 
