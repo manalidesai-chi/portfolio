@@ -33,7 +33,6 @@ h2 {
 h3 {
   font-size: 22px;
   text-align: center;
-  /*padding: 10px 0px;*/
 }
 
 p {
@@ -279,35 +278,7 @@ footer{
     max-width: 300px;
     height: 300px;
     object-fit: cover;
-    /*border: 2px solid red;*/
   }
-
-/*  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(auto, 5);
-    grid-row-gap: 10px;
-  }
-
-  header {
-    grid-column: -1 / 1;
-    grid-row: 1 / span 1;
-  }
-
-  .gallery {
-    grid-column: -1 / 1;
-    grid-row: 2 / span 1;
-  }
-
-  #nutNinja {
-    grid-row: 2 / span 1; 
-    grid-column: -1 / 1;
-  }
-  #bean {
-    grid-row: 3 / span 1; 
-    grid-column: -1 / 1;
-  }  */
-
 
   .col {
     width: 50%;
@@ -323,56 +294,34 @@ footer{
   } 
 
 
-  .container {
+  .work-block {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto auto 80px;
-    grid-row-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px 100px;
+    margin: 20px 100px 20px 100px;
   }
-
-  header {
-    grid-column: -1 / 1;
+  .work-block h2 {
     grid-row: 1 / span 1;
+    grid-column: 1 / 3;
+  }
+  .work-block img {
+    grid-row: 1 / -1;
+    grid-column: 2 / span 3;
+    object-fit: cover;
+    z-index: -1;
+    height: 100%;
+  }
+  .work-block p {
+    grid-row: 2 / span 2;
+    grid-column: 1 / span 1;
   }
 
-  .gallery {
-    grid-column: -1 / 1;
-    grid-row: 2 / span 1;
+  .col3-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: auto;
+    margin: 20px 40px 20px 40px;
   }
-
-  #nutNinja {
-    grid-row: 2 / span 1; 
-    grid-column: -1 / 1;
-  }
-  #bean {
-    grid-row: 3 / span 1; 
-    grid-column: -1 / 1;
-  }
-
-
-  #about-summary{
-    grid-row: 2 / span 1; 
-    grid-column: -1 /1 ;
-  }
-  #about-one {
-    grid-row: 4 / span 1; 
-    grid-column: 1 / span 1 ;
-  }  
-  #about-two {
-    grid-row: 4 / span 1; 
-    grid-column: 2 / span 1 ;
-  }  
-  #about-three {
-    grid-row: 4 / span 1; 
-    grid-column: 3 / span 1 ;
-  }
-
-  #about h2 {
-    grid-row: 3 / span 1;
-    grid-column: -1 / 1;
-  }
-
-
 
 }
 
@@ -384,7 +333,6 @@ footer{
     padding: 20px 25px;
   }
 
-
   .nav-links {
     justify-content: flex-end;
     padding-right:20px;
@@ -394,7 +342,9 @@ footer{
     margin: 20px 50px;
   }
 
-
+  .col3-block {
+    margin: 20px 100px 20px 100px;
+  }
 
 }
 
