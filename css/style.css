@@ -32,12 +32,16 @@ h2 {
 
 h3 {
   font-size: 22px;
-  /*text-align: center;*/
+  text-align: center;
   /*padding: 10px 0px;*/
 }
 
 p {
   margin: 10px;
+}
+
+.contact-block {
+  text-align: center;
 }
 
 /********** NAV *************/
@@ -154,36 +158,6 @@ img {
 }
 
 /********** Grid *************/
-/*
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto 80px;
-  grid-row-gap: 10px;
-}
-
-header {
-  grid-column: -1 / 1;
-  grid-row: 1 / span 1;
-}
-
-.gallery {
-  grid-column: -1 / 1;
-  grid-row: 2 / span 1;
-}
-
-#nutNinja {
-  grid-row: 2 / span 1; 
-  grid-column: -1 / 1;
-}
-
-#bean {
-  grid-row: 3 / span 1; 
-  grid-column: -1 / 1;
-}
-*/
-
-
 
 /********** Form *************/
 .form {
@@ -348,9 +322,56 @@ footer{
     justify-content: space-between;
   } 
 
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto 80px;
+    grid-row-gap: 10px;
+  }
+
+  header {
+    grid-column: -1 / 1;
+    grid-row: 1 / span 1;
+  }
+
+  .gallery {
+    grid-column: -1 / 1;
+    grid-row: 2 / span 1;
+  }
+
+  #nutNinja {
+    grid-row: 2 / span 1; 
+    grid-column: -1 / 1;
+  }
+  #bean {
+    grid-row: 3 / span 1; 
+    grid-column: -1 / 1;
+  }
+
+
   #about-summary{
+    grid-row: 2 / span 1; 
     grid-column: -1 /1 ;
   }
+  #about-one {
+    grid-row: 4 / span 1; 
+    grid-column: 1 / span 1 ;
+  }  
+  #about-two {
+    grid-row: 4 / span 1; 
+    grid-column: 2 / span 1 ;
+  }  
+  #about-three {
+    grid-row: 4 / span 1; 
+    grid-column: 3 / span 1 ;
+  }
+
+  #about h2 {
+    grid-row: 3 / span 1;
+    grid-column: -1 / 1;
+  }
+
 
 
 }
