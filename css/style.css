@@ -376,6 +376,9 @@ footer{
 
 
 @media (prefers-reduced-motion: reduce) { 
-
+  
+  .flipcard-inner{
+    -webkit-transition: none;
+  }
 
 }
