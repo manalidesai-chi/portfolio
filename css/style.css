@@ -8,7 +8,7 @@ body{
   font-size: 18px;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   font-weight: none;
   box-sizing: border-box;
 }
@@ -16,35 +16,74 @@ body{
 h1 {
   font-size: 30px;
   padding: 15px 20px;
-  font-family: 'Oswald', 'Roboto';
+  font-family: 'Oswald';
   background-color: #97e314;
   justify-content: center;
   display: inline-flex;
 }
-
 h2 {
   font-size: 25px;
   padding: 10px;
-  margin: 10px 0px 10px 0px;
+  margin: 20px 0px 20px 0px;
+  font-family: 'Oswald';
   text-align: center;
   background-color: #97e314;
 }
-
 h3 {
-  font-size: 22px;
+  font-size: 20px;
+  text-align: center;
+}
+p{
+  font-size: 16px;
+  margin: 20px;
+  line-height: 1.15;
+}
+
+.contact-block *{
   text-align: center;
 }
 
-p {
-  margin: 10px;
+* a {
+  color: black;
+  text-decoration: underline;
 }
 
-.contact-block {
-  text-align: center;
+.work-block p {
+  margin: 5px;
+}
+
+
+
+/********** Text effect *************/
+
+.wrapper {
+    display: inline-block;
+    text-align: left;
+    /*background-color: black;*/
+    margin: 20px;
+}
+
+.clip-text {  
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+
+
+    color: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-family: 'Oswald', sans-serif;
+    background-color: #000;
+    background-image: url("../images/green.jpeg");
+    -webkit-filter: contrast(120%);
 }
 
 /********** NAV *************/
-.nav-links{
+
+.navbar{
   display: flex;
   flex-direction: column;
   background-color: black;
@@ -54,10 +93,17 @@ p {
   justify-content: center;
 }
 
-/*nav li{
-  display:inline;
+.nav-links{
+  display: flex;
+  flex-direction: column;
 }
-*/
+
+.navbar h1 {
+  font-size: 30px ;
+  margin: 20px;
+  padding: 10px;
+}
+
 nav a, footer a{
   display: inline-block;
   color: white;
@@ -65,6 +111,8 @@ nav a, footer a{
   padding: 5px 15px;
   border: 2px solid #97e314;
   margin: 5px 5px;
+  font-family: 'Oswald';
+  font-size: 18px;
 }
 
 .active a{
@@ -90,7 +138,7 @@ nav a, footer a{
   top: 0px;
 }
 
-a:focus{
+*:focus, {
   border: 2px solid #97e314;
   border-style: double;
   border-width: 7px;
@@ -103,30 +151,18 @@ img {
   object-fit: cover;
 }
 
-/*#landing {
-  display: block;
-  width: 100%;
-  min-height: auto;
-}
-*/
-
 #landing {
   background-image: url("../images/landing.jpg");
   height: 100vh; 
   background-attachment: fixed;
   background-repeat: no-repeat;
-  /*background-position: center;*/
-  background-position: 80% 10%;  
+  background-position: 80% 10%;  /*make sure face is seen on mobile*/
   background-size: cover;
-/*  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: */
 }
 
-#landing p {
+/*#landing p {
   color:white;
-
-}
+}*/
 
 #about header {
   background-image: url("../images/laserMirror.jpg");
@@ -141,10 +177,11 @@ img {
 /********** Gallery *************/
 .gallery {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin: 20px;
 }
 
 .card {
@@ -157,10 +194,20 @@ img {
   margin: 10px;
 }
 
+.card p {
+  text-align: center;
+  margin: 10px;
+}
+
 .card > img {
   max-width: 200px;
   height: 200px;
   object-fit: cover;
+  -webkit-filter: contrast(130%);
+}
+
+.card > img:hover{
+  -webkit-filter: grayscale(100%);
 }
 
 
@@ -180,8 +227,6 @@ input[type=text], select, textarea {
   border-radius: 3px; 
   box-sizing: border-box;
   margin: 10px;
-/*  margin-top: 6px;
-  margin-bottom: 16px;*/
   resize: vertical; 
 }
 
@@ -208,45 +253,44 @@ footer{
 }
 
 /********** Flipcard *************/
-  .flipcard {
-    background-color: transparent;
-    width: 300px;
-    height: 300px;
-    perspective: 1000px; 
-    margin: 20px auto 20px auto;
-  }
+.flipcard {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px; 
+  margin: 20px auto 20px auto;
+}
+.flipcard-inner{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  -webkit-transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flipcard:hover .flipcard-inner {
+  transform: rotateY(180deg);
+}
+.flipcard-front, .flipcard-back {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  object-fit: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flipcard-front {
+  background-color: #bbb;
+  color: black;
+}
+.flipcard-back {
+  background-color: blue;
+  transform: rotateY(180deg);
+}
 
-  .flipcard-inner{
-    position: relative;
-    width: 300px;
-    height: 300px;
-    -webkit-transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  .flipcard:hover .flipcard-inner {
-    transform: rotateY(180deg);
-  }
-  .flipcard-front, .flipcard-back {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    object-fit: hidden;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  .flipcard-front {
-    background-color: #bbb;
-    color: black;
-  }
-  .flipcard-back {
-    background-color: blue;
-    transform: rotateY(180deg);
-  }
-
+/********** Works *************/
   .work-block {
     margin: 20px;
   }
-
   .work-block h2 {
     background-color: black;
     color: white;
@@ -257,23 +301,77 @@ footer{
     color: black;
   }
 
+/********** Animation *************/
+  @keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
 
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
 
+.fadeInRight{
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+  animation-duration: 1s;
+}
+.fadeInRight-long {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+  animation-duration: 4s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+}
 
 
 /*********************** TABLET ************************************************/
-@media all and (min-width: 600px){
+@media all and (min-width: 550px){
 
   h1 {
     font-size: 40px;
     padding: 20px 25px;
+  }
+  p{
+    font-size: 18px;
+  }
+
+  .clip-text {
+    font-size: 10vw;
+    padding: 3vw 5vw;   
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
   }
 
   .nav-links {
     flex-direction: row;
     align-items: center;
   }
-  
+
   nav a:hover, footer a:hover {
     border-style: inset;
     border-color: #97e314;
@@ -295,13 +393,13 @@ footer{
     object-fit: cover;
   }
 
-  .col {
+  .form .col {
     width: 50%;
   }
 
-  footer * {
-    margin-left: 40px;
-    margin-right: 40px;
+  footer a, footer p {
+    margin-left: 50px;
+    margin-right: 50px;
   }
   footer {
     flex-direction: row;
@@ -312,15 +410,15 @@ footer{
   .work-block {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 100px 100px 100px;
-    margin: 20px 50px 20px 50px;
+    grid-template-rows: 100px 100px auto;
+    min-height: 300px;
+    padding: 0px 50px 0px 50px;
   }
   .work-block h2 {
     grid-row: 1 / span 1;
     grid-column: 1 / 3;
     align-self: center;
     text-align: left;
-    /*padding: 10px 0px 10px 0px;*/
   }
   .work-block img {
     grid-row: 1 / -1;
@@ -334,19 +432,32 @@ footer{
     grid-column: 1 / span 1;
   }
 
+  .work-block, .form {
+    margin: 20px auto 20px auto;
+  }
+
+  header p {
+    max-width: 70%;
+    text-align: center;
+    margin: 20px auto 20px auto;
+  }
+
   .col3-block { 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
     grid-template-rows: auto;
-    margin: 20px 40px 20px 40px;
   }
+  .col2-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  .col3-block, .col2-block {
+     margin: 20px 50px 20px 50px;
+  } 
 
-  header p {
-    max-width: 75%;
-    text-align: center;
-    /*justify-content: center;*/
-    margin-left: auto;
-    margin-right: auto;
+  .gallery {
+    flex-direction: row;
   }
 
 
@@ -356,12 +467,21 @@ footer{
 @media all and (min-width: 850px){
 
   h1 {
-    font-size: 50px;
+    font-size: 60px;
     padding: 20px 25px;
   }
+  h2 {
+    font-size: 30px;
+  }
 
-  .nav-links {
-    justify-content: flex-end;
+  .work-block, .form {
+    width: 70%;
+  }
+
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     padding-right:20px;
   }
 
@@ -369,21 +489,11 @@ footer{
     margin: 20px 50px;
   }
 
-  .col3-block {
-    margin: 20px 100px 20px 100px;
-  }
-
-  .work-block {
-    /*margin: 20px 150px 20px 150px;*/
-    width: 70%;
+  .col3-block, .col2-block {
     margin: 20px auto 20px auto;
+    max-width: 1000px;
   }
 
-  .form {
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-  }
 
 }
 
@@ -392,6 +502,10 @@ footer{
   
   .flipcard-inner{
     -webkit-transition: none;
+  }
+
+  .fadeInRight, .fadeInRight-long, .fadeIn{
+    animation: none;
   }
 
 }

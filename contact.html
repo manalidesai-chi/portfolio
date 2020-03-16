@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto|Roboto+Condensed|Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald%7cRoboto&display=swap" rel="stylesheet">
         <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160195248-1"></script>
     <script>
@@ -21,15 +21,18 @@
 <main>  
 
   <div class="skip"><a href="#main">Skip to Main Content</a></div>
-    <nav>
-      <ul class="nav-links">
-        <li class="nav_item"><a href="index.html">Home</a></li>
-        <li class="nav_item"><a href="about.html">About</a></li>
-        <li class="nav_item"><a href="works.html">Works</a></li>
-        <li class="nav_item"><a href="digifab.html">Gallery</a></li>
-        <li class="nav_item active"><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class = "navbar">
+      <h1>Manali Desai</h1>
+      <nav>
+        <ul class="nav-links">
+          <li class="nav_item"><a href="index.html">Home</a></li>
+          <li class="nav_item"><a href="about.html">About</a></li>
+          <li class="nav_item"><a href="works.html">Works</a></li>
+          <li class="nav_item"><a href="digifab.html">Gallery</a></li>
+          <li class="nav_item active"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
 
   <div class = "container">
 
@@ -38,18 +41,14 @@
       <p>Want to collaborate? Want feedback? Looking for a travel buddy? Want to make something? Or most importantly... got a good cat pic to share?</p>
     </header>
 
-      <div class = flipcard>
-        <div class = flipcard-inner>
-
+      <div class = "flipcard" tabindex ="0">
+        <div class = "flipcard-inner fadeInRight-long">
           <div class = "flipcard-front">
-            <img src="images/cats/zencat.jpg" alt="" id = "aboutPic">
+            <img src="images/cats/zencat.jpg" alt="cat in a funny zen-like pose" id = "aboutPic"> 
           </div>
-
           <div class = "flipcard-back">
             <img src="images/cats/compcat.jpg" alt="" id = "catPic">
-            <!-- <h2>Scroll.</h2> -->
           </div>
-
         </div>
       </div>
 
@@ -66,11 +65,11 @@
     </div>
     <div class="contact-block">
       <h3>Facebook</h3>
-        <p>insert link</p>
+        <p><a href="https://www.facebook.com/manali.desai.1901">manali.desai.1901</a></p>
     </div>
   </div>
 
-<div class="form" >
+  <div class="form" >
   <form action="https://formspree.io/xlebadll" method="POST">
 
   <div class = "row col">
@@ -85,16 +84,13 @@
 
   <div class = "row">
     <label for="message">Message</label>
-    <textarea id="text" name="message" placeholder="Write something.."></textarea>
+    <textarea id="message" name="message" placeholder="Write something.."></textarea>
   </div>
 
     <input type="submit" value="Submit">
 
   </form>
-</div>
-
-
-
+  </div>
 
   </div>
 
