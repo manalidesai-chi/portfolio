@@ -59,7 +59,6 @@ p{
 .wrapper {
     display: inline-block;
     text-align: left;
-    /*background-color: black;*/
     margin: 20px;
 }
 
@@ -138,7 +137,7 @@ nav a, footer a{
   top: 0px;
 }
 
-*:focus, {
+*:focus, .card:focus {
   border: 2px solid #97e314;
   border-style: double;
   border-width: 7px;
@@ -159,10 +158,6 @@ img {
   background-position: 80% 10%;  /*make sure face is seen on mobile*/
   background-size: cover;
 }
-
-/*#landing p {
-  color:white;
-}*/
 
 #about header {
   background-image: url("../images/laserMirror.jpg");
