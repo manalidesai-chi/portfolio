@@ -448,7 +448,7 @@ footer{
     grid-template-rows: auto;
   }
   .col3-block, .col2-block {
-     margin: 20px 50px 20px 50px;
+     margin: 20px ;
   } 
 
   .gallery {
@@ -487,6 +487,7 @@ footer{
   .col3-block, .col2-block {
     margin: 20px auto 20px auto;
     max-width: 1000px;
+    /*width: 70%;*/
   }
 
 
