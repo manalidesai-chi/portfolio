@@ -240,15 +240,18 @@ input[type=text], select, textarea {
   resize: vertical; 
 }
 
-input[type=submit] {
+input[type=submit], button {
   box-sizing: border-box;
   font-size: 18px;
   padding: 5px 20px; 
   background-color: #97e314;
   border-radius: 25px;
   display: block;
+  margin: 10px;
   margin-left: auto;
   margin-right: auto;
+  /*margin: auto, 10px, auto, 10px,;*/
+  /*font-weight: bold;*/
 }
 
 
