@@ -43,7 +43,7 @@ p{
   text-align: center;
 }
 
-* a {
+a {
   color: black;
   text-decoration: underline;
 }
@@ -307,12 +307,15 @@ footer{
   .work-block h2 {
     background-color: black;
     color: white;
+    text-decoration: none;
     margin: 0px;
   }
+
   .work-block h2:hover {
     background-color: #97e314;
-    color: black;
+    color:black;
   }
+
 
 /********** Animation *************/
   @keyframes fadeInRight {
