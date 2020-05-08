@@ -25,7 +25,7 @@ h1 {
 h2 {
   font-size: 30px;
   padding: 10px;
-  margin: 50px 0px 50px 0px;
+  margin: 40px 0px 40px 0px;
   font-family: 'Oswald';
   text-align: center;
   background-color: #97e314;
@@ -34,15 +34,17 @@ h2 {
 */}
 h3 {
   font-size: 22px;
+  margin: 20px;
+  margin-top: 0px;
   text-align: center;
 }
 h4 {
   font-size: 20px;
-  margin: 20px;
+  margin: 10px;
 }
 p{
   font-size: 16px;
-  margin: 20px;
+  margin: 15px;
   line-height: 1.15;
 }
 
@@ -259,6 +261,10 @@ input[type=submit], button {
   margin-right: auto;
   /*margin: auto, 10px, auto, 10px,;*/
   /*font-weight: bold;*/
+}
+button {
+  margin-left: auto;
+  margin-right: 0px;
 }
 
 
